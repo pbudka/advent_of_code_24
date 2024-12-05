@@ -1,6 +1,3 @@
-import re
-
-
 
 def readInput(fname):
     reports = []

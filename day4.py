@@ -46,15 +46,27 @@ def findAllXmas(lines):
     total += findXmas(lines)
     total += findXmas(reverse(lines))
     tlines = transpose(lines)
-#    print("transposed", tlines)
+    print("transposed", tlines)
     total += findXmas(tlines)
     total += findXmas(reverse(tlines))
     dlines = diagonal(lines)
     dlines += diagonal(reverse(transpose(reverse(lines))))[:-1]
-#    print("diagonal",  dlines)
+    print("diagonal1",  dlines)
+    total += findXmas(dlines)
+    total += findXmas(reverse(dlines))
+    dlines = diagonal(reverse(lines))
+    dlines += diagonal(reverse(transpose(lines)))[:-1]
+    print("diagonal2",  dlines)
     total += findXmas(dlines)
     total += findXmas(reverse(dlines))
     return total
+
+def readLines(fname):
+    with open(fname, "r") as f:
+        lines = [l[:-1] for l in f.readlines()]
+    print(len(lines), len(lines[0]))
+    print(lines)
+    return lines
 
 if __name__ == '__main__':
     inp = ["MMMSXXMASM",
@@ -68,10 +80,6 @@ if __name__ == '__main__':
            "MAMMMXMMMM",
            "MXMXAXMASX"]
     print(findAllXmas(inp))
-    with open("day4.txt", "r") as f:
-        lines = [l[:-1] for l in f.readlines()]
-        print(len(lines), len(lines[0]))
-        print(lines)
-        print(findAllXmas(lines))
+    print(findAllXmas(readLines("day4.txt")))
 
 
