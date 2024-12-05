@@ -1,6 +1,5 @@
 import re
 
-pattern = re.compile('(\\d+)\\W+(\\d+)\\W+(\\d+)\\W+(\\d+)\\W+(\\d+)\\W+(\\d+)\\W+(\\d+)')
 
 
 def readInput(fname):
