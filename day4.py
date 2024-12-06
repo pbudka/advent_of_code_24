@@ -20,22 +20,27 @@ def findMas(lines):
     i = 0
     for l in slines:
         if m := re.search(pattern2, l):
-            hitCoords += [(i, m.span()[0]+1)]
+            hitCoords += [(i, m.span()[0] + 1)]
         i += 1
     return hitCoords
+
 
 def toList(lines):
     return [list(l) for l in lines]
 
+
 def toString(lines):
     return [''.join(l) for l in lines]
+
 
 def clone(lines):
     return [l[:] for l in lines]
 
+
 def reverse(lines):
     rlines = clone(lines)
     return [list(reversed(l)) for l in rlines]
+
 
 def transpose(lines):
     tlines = []
@@ -46,6 +51,7 @@ def transpose(lines):
             else:
                 tlines[y] += [lines[x][y]]
     return tlines
+
 
 def diagonal(lines):
     dlines = []
@@ -60,6 +66,7 @@ def diagonal(lines):
                 break
     return dlines
 
+
 def findAllXmas(lines):
     total = 0
     total += findXmas(lines)
@@ -70,44 +77,74 @@ def findAllXmas(lines):
     total += findXmas(reverse(tlines))
     dlines = diagonal(lines)
     dlines += diagonal(reverse(transpose(reverse(lines))))[:-1]
-    print("diagonal1",  toString(dlines))
+    print("diagonal1", toString(dlines))
     total += findXmas(dlines)
     total += findXmas(reverse(dlines))
     dlines = diagonal(reverse(lines))
     dlines += diagonal(reverse(transpose(lines)))[:-1]
-    print("diagonal2",  toString(dlines))
+    print("diagonal2", toString(dlines))
     total += findXmas(dlines)
     total += findXmas(reverse(dlines))
     return total
 
+
 def conversionTable(size):
-    list = [[(y,x) for x in range(size)] for y in range(size)]
-    return list
+    lst = [[(y, x) for x in range(size)] for y in range(size)]
+    return lst
+
+def findAllMas2(lines):
+    hits = set()
+    for x in range(1, len(lines) -1):
+        for y in range(1, len(lines) -1):
+            if lines[x][y] == 'A':
+                if ((lines[x-1][y-1] == 'M' and
+                        lines[x+1][y+1] == 'S' or
+                        lines[x-1][y-1] == 'S' and
+                        lines[x+1][y+1] == 'M') and
+                        (lines[x-1][y+1] == 'M' and
+                         lines[x+1][y-1] == 'S' or
+                         lines[x-1][y+1] == 'S' and
+                         lines[x+1][y-1] == 'M')):
+                    hits.add((x,y))
+    printHits("hits", hits)
+    return len(hits)
 
 def findAllMas(lines):
     conv = conversionTable(len(lines))
 
+    # convTab = conv[:]
+    # hits = findMasHits(convTab, lines)
+    # convTab = transpose(conv)
+    # tlines = transpose(lines)
+    # hits2 = findMasHits(convTab, tlines)
+    # hitsSet = hits2.intersection(hits)
+    # printHits("orthogonal", hitsSet)
+
     convTab = diagonal(conv)
     convTab += reversed(diagonal(reverse(transpose(reverse(conv))))[:-1])
-#    print("diag conf table 1 ", convTab)
+    #    print("diag conf table 1 ", convTab)
     dlines = diagonal(lines)
     dlines += reversed(diagonal(reverse(transpose(reverse(lines))))[:-1])
-#    print("diagonal1",  toString(dlines))
+    #    print("diagonal1",  toString(dlines))
     hits = findMasHits(convTab, dlines)
 
     convTab = diagonal(reverse(conv))
     convTab += reversed(diagonal(reverse(transpose(conv)))[:-1])
-#    print("diag conf table 1 ", convTab)
+    #    print("diag conf table 1 ", convTab)
     dlines = diagonal(reverse(lines))
     dlines += reversed(diagonal(reverse(transpose(lines)))[:-1])
-#    print("diagonal2",  toString(dlines))
+    #    print("diagonal2",  toString(dlines))
     hits2 = findMasHits(convTab, dlines)
 
     hits = hits2.intersection(hits)
+    printHits("diagnoal", hits)
+    return len(hits)
+
+
+def printHits(prefix, hits):
     hits = list(hits)
     hits.sort()
-    print("intersection", hits)
-    return len(hits)
+    print(prefix, hits)
 
 
 def findMasHits(convTab, dlines):
@@ -140,7 +177,7 @@ if __name__ == '__main__':
            "MXMXAXMASX"]
     print("findAllXmas: ", findAllXmas(inp))
     print("findAllMas: ", findAllMas(inp))
+    print("findAllMas2: ", findAllMas2(inp))
     print("findAllXmas: ", findAllXmas(readLines("day4.txt")))
     print("findAllMas: ", findAllMas(readLines("day4.txt")))
-
-
+    print("findAllMas2: ", findAllMas2(readLines("day4.txt")))
