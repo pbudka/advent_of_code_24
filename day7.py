@@ -62,8 +62,6 @@ def to_radix(radix, n):
 
 
 if __name__ == '__main__':
-
-
     ass = read("day7ex.txt")
     tot = 0
     for exp, vals in ass.items():
