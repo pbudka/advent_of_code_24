@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a0f3a25-8ead-4a38-ab74-56e2faf13c3a" name="Changes" comment="day6 done">
-      <change afterPath="$PROJECT_DIR$/day7.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day7ex.txt" afterDir="false" />
+    <list default="true" id="4a0f3a25-8ead-4a38-ab74-56e2faf13c3a" name="Changes" comment="day8">
+      <change afterPath="$PROJECT_DIR$/day9.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day9.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +41,7 @@
     "Python.day5.executor": "Run",
     "Python.day6.executor": "Run",
     "Python.day7.executor": "Run",
+    "Python.day9.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
@@ -143,7 +143,8 @@
     <MESSAGE value="day4 2nd solution done" />
     <MESSAGE value="day5 done" />
     <MESSAGE value="day6 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="day6 done" />
+    <MESSAGE value="day8" />
+    <option name="LAST_COMMIT_MESSAGE" value="day8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
