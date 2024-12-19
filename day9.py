@@ -28,37 +28,25 @@ def replaceAtIndex(text, index, replacement):
 
 def moveWhole(data):
     string = ''.join(['.' if i is None else str(i) for i in data])
-    print(string)
-    blank = re.compile(r'[.]+')
     digit = re.compile(r'(0+|1+|2+|3+|4+|5+|6+|7+|8+|9+)')
     subStr = string[:]
-    end = 0
-    while True:
-        finds = list(re.finditer(digit, subStr))
-        if not finds:
-            return string
-        word = finds[-1]
-        wordLen = word.end() - word.start()
-        pEnd = end
-        newStr, end = replaceToSpace(blank, string, word, wordLen, pEnd)
-        if newStr is None:
-            if word.start() == 0:
-                return string
-            subStr = subStr[0:word.start()]
-        else:
-            if end > word.start() + pEnd:
-                return newStr
+    for word in list(re.finditer(digit, subStr))[::-1]:
+        newStr = replaceToSpace(string, word)
+        if newStr:
             string = newStr
-            subStr = string[end:word.start()+pEnd]
+        if word.start() == 0:
+            return string
 
 
-def replaceToSpace(blank, string, word, wordLen, end):
+def replaceToSpace(string, word):
+    wordLen = word.end() - word.start()
+    blank = re.compile(r'[.]{' + str(wordLen) + r',}')
     for space in blank.finditer(string):
-        if wordLen <= space.end() - space.start() and space.start() < word.start() + end:
+        if space.start() < word.start():
             newStr = replaceAtIndex(string, space.start(), word.group(0))
-            newStr = replaceAtIndex(newStr, word.start() + end, '.' * wordLen)
-            return newStr, space.start() + wordLen
-    return None, end
+            newStr = replaceAtIndex(newStr, word.start(), '.' * wordLen)
+            return newStr
+
 
 
 def checksum(data):
@@ -79,12 +67,19 @@ if __name__ == '__main__':
     print(data)
     print(checksum(data))
 
-    data = uncompress("2333133121414131402")
-    print( moveWhole(data) )
 
-#     data = read("day9.txt")
-#     data = uncompress(data)
-#     print(data)
-#     move(data)
-#     print(data)
-#     print(checksum(data))
+    data = read("day9.txt")
+    data = uncompress(data)
+#    print(data)
+    move(data)
+#    print(data)
+    print(checksum(data))
+
+    data = uncompress("2333133121414131402")
+    print(data)
+    print(moveWhole(data))
+
+    data = read("day9.txt")
+    data = uncompress(data)
+    data = moveWhole(data)
+    print(checksum(data))
