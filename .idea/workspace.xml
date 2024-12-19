@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a0f3a25-8ead-4a38-ab74-56e2faf13c3a" name="Changes" comment="day8">
-      <change afterPath="$PROJECT_DIR$/day9.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day9.txt" afterDir="false" />
+    <list default="true" id="4a0f3a25-8ead-4a38-ab74-56e2faf13c3a" name="Changes" comment="day8 in construction">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/advent_of_code_24.iml" beforeDir="false" afterPath="$PROJECT_DIR$/advent_of_code_24.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day9.py" beforeDir="false" afterPath="$PROJECT_DIR$/day9.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +42,14 @@
     "Python.day5.executor": "Run",
     "Python.day6.executor": "Run",
     "Python.day7.executor": "Run",
+    "Python.day8.executor": "Run",
     "Python.day9.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -121,7 +126,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734282749389</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="day7 done">
+      <option name="closed" value="true" />
+      <created>1734291064590</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1734291064590</updated>
+    </task>
+    <task id="LOCAL-00010" summary="day8 in construction">
+      <option name="closed" value="true" />
+      <created>1734292789890</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734292789890</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,23 +164,8 @@
     <MESSAGE value="day4 2nd solution done" />
     <MESSAGE value="day5 done" />
     <MESSAGE value="day6 done" />
-    <MESSAGE value="day8" />
-    <option name="LAST_COMMIT_MESSAGE" value="day8" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/day6.py</url>
-          <line>52</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/day7.py</url>
-          <line>34</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="day7 done" />
+    <MESSAGE value="day8 in construction" />
+    <option name="LAST_COMMIT_MESSAGE" value="day8 in construction" />
   </component>
 </project>
