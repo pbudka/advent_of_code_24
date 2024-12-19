@@ -40,18 +40,23 @@ def moveWhole(data):
 
 def replaceToSpace(string, word):
     wordLen = word.end() - word.start()
-    blank = re.compile(r'[.]{' + str(wordLen) + r',}')
-    for space in blank.finditer(string):
-        if space.start() < word.start():
-            newStr = replaceAtIndex(string, space.start(), word.group(0))
-            newStr = replaceAtIndex(newStr, word.start(), '.' * wordLen)
-            return newStr
+    space = re.search(r'[.]{' + str(wordLen) + r',}', string[0:word.start()])
+    if space:
+        newStr = replaceAtIndex(string, space.start(), word.group(0))
+        newStr = replaceAtIndex(newStr, word.start(), '.' * wordLen)
+        return newStr
 
 
 
 def checksum(data):
     s = 0
-    for i in range(0,data.index(None)):
+    for i in range(0, data.index(None)):
+        s += i * data[i]
+    return s
+
+def checksum2(data):
+    s = 0
+    for i in range(0, len(data)):
         s += i * data[i]
     return s
 
@@ -77,9 +82,11 @@ if __name__ == '__main__':
 
     data = uncompress("2333133121414131402")
     print(data)
-    print(moveWhole(data))
+    data = moveWhole(data)
+    print(data)
+    print(checksum2([int(i) if i != '.' else 0 for i in data]))
 
     data = read("day9.txt")
     data = uncompress(data)
     data = moveWhole(data)
-    print(checksum(data))
+    print(checksum2([int(i) if i != '.' else 0 for i in data]))
