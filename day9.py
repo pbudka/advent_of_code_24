@@ -3,11 +3,11 @@ import re
 def uncompress(data):
     file = True
     result = []
-    id = 0
+    fid = 0
     for ch in data:
         if file:
-            result += [id]*int(ch)
-            id += 1
+            result += [fid]*int(ch)
+            fid = (fid + 1)
         else:
             result += [None]*int(ch)
         file = not file
@@ -26,25 +26,51 @@ def move(data):
 def replaceAtIndex(text, index, replacement):
     return text[:index] + replacement + text[index + len(replacement):]
 
-def moveWhole(data):
+def moveWholeString(data):
     string = ''.join(['.' if i is None else str(i) for i in data])
+    print(string)
     digit = re.compile(r'(0+|1+|2+|3+|4+|5+|6+|7+|8+|9+)')
-    subStr = string[:]
-    for word in list(re.finditer(digit, subStr))[::-1]:
-        newStr = replaceToSpace(string, word)
-        if newStr:
-            string = newStr
-        if word.start() == 0:
-            return string
+    i = 0
+    for word in list(re.finditer(digit, string))[::-1]:
+        i += 1
+        if i % 1 == 0:
+            print(string[0:200], i, word.start(), word.group(0))
+        if i > 20:
+            return  string
+        wordLen = word.end() - word.start()
+        space = re.search(r'[.]{' + str(wordLen) + r',}', string[0:word.start()])
+        if space:
+            string = (string[:space.start()] +
+                      word.group(0) +
+                      string[space.start() + wordLen:word.start()] +
+                      '.' * wordLen +
+                      string[word.start() + wordLen:])
+    print(string)
+    return string
 
+def moveWhole(data):
+    ### replace regex with a search in a list
+    string = ''.join(['.' if i is None else str(i) for i in data])
+    print(string)
+    digit = re.compile(r'(0+|1+|2+|3+|4+|5+|6+|7+|8+|9+)')
+    i = 0
+    for word in list(re.finditer(digit, string))[::-1]:
+        i += 1
+        if i % 1 == 0:
+            print(string[0:200], i, word.start(), word.group(0))
+        if i > 20:
+            return  string
+        wordLen = word.end() - word.start()
+        space = re.search(r'[.]{' + str(wordLen) + r',}', string[0:word.start()])
+        if space:
+            string = (string[:space.start()] +
+                      word.group(0) +
+                      string[space.start() + wordLen:word.start()] +
+                      '.' * wordLen +
+                      string[word.start() + wordLen:])
+    print(string)
+    return string
 
-def replaceToSpace(string, word):
-    wordLen = word.end() - word.start()
-    space = re.search(r'[.]{' + str(wordLen) + r',}', string[0:word.start()])
-    if space:
-        newStr = replaceAtIndex(string, space.start(), word.group(0))
-        newStr = replaceAtIndex(newStr, word.start(), '.' * wordLen)
-        return newStr
 
 
 
@@ -86,7 +112,11 @@ if __name__ == '__main__':
     print(data)
     print(checksum2([int(i) if i != '.' else 0 for i in data]))
 
+    data = uncompress("233313312141413140225")
+    print(data)
+
     data = read("day9.txt")
     data = uncompress(data)
-    data = moveWhole(data)
-    print(checksum2([int(i) if i != '.' else 0 for i in data]))
+#    data = moveWhole(data)
+#    print(checksum2([int(i) if i != '.' else 0 for i in data]))
+    print(90546720886)
