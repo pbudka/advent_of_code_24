@@ -4,7 +4,27 @@ import pickle
 import gzip
 import tempfile
 from datetime import datetime
+from collections import Counter
 
+
+def counterBlink(data):
+    ret = Counter()
+    for el, cnt in data.items():
+        if el == 0:
+            val = 1
+            ret[val] = ret[val] + cnt if val in ret else cnt
+        else:
+            si = str(el)
+            d, m = divmod(len(si), 2)
+            if m == 0:
+                val = int(si[:d])
+                ret[val] = ret[val] + cnt if val in ret else cnt
+                val = int(si[d:])
+                ret[val] = ret[val] + cnt if val in ret else cnt
+            else:
+                val = el * 2024
+                ret[val] = ret[val] + cnt if val in ret else cnt
+    return ret
 
 def blink(data):
     ret = []
@@ -61,12 +81,27 @@ def restore(fName):
     os.remove(fName)
     return data
 
+def justRestore(fName):
+    with gzip.open(fName, 'rb') as file:
+        data = pickle.load(file)
+    return data
+
+def cToList(data):
+    kes = list(data.keys())
+    kes.sort()
+    return [(k, data[k]) for k in kes]
+
 
 if __name__ == '__main__':
+    data = Counter([125, 17])
+    for i in range(25):
+        data = counterBlink(data)
+        print(i, len(data), sum(data.values()), cToList(data))
+
     data = [125, 17]
     for i in range(25):
         data = blink(data)
-        print(i, len(data))
+        print(i, len(data), cToList(Counter(data)))
 
     data = [125, 17]
     fNames = [store(data)]
@@ -79,9 +114,14 @@ if __name__ == '__main__':
         l += len(data)
     print(l)
 
+    data = Counter([28, 4, 3179, 96938, 0, 6617406, 490, 816207])
+    for i in range(75):
+        data = counterBlink(data)
+        print(i, len(data), sum(data.values()))
+
     data = [28, 4, 3179, 96938, 0, 6617406, 490, 816207]
     fNames = [store(data)]
-    for i in range(75):
+    for i in range(0):
         t = datetime.now()
         newFNames = multiBlink(fNames)
         for f in fNames:
@@ -89,7 +129,15 @@ if __name__ == '__main__':
                 print(f)
                 os.remove(f)
         fNames = newFNames
-        print(i, len(fNames), datetime.now() - t)
+        l = 0
+        allData = []
+        for fName in fNames:
+            data = justRestore(fName)
+            allData += data
+            l += len(data)
+        allData.sort()
+        print(allData[:100], allData[-100:])
+        print(i, l, len(fNames), datetime.now() - t)
     l = 0
     for fName in fNames:
         data = restore(fName)

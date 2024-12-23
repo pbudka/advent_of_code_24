@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a0f3a25-8ead-4a38-ab74-56e2faf13c3a" name="Changes" comment="day8 in construction">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+    <list default="true" id="4a0f3a25-8ead-4a38-ab74-56e2faf13c3a" name="Changes" comment="day length with DST">
+      <change afterPath="$PROJECT_DIR$/day_length.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day_length_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/advent_of_code_24.iml" beforeDir="false" afterPath="$PROJECT_DIR$/advent_of_code_24.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9.py" beforeDir="false" afterPath="$PROJECT_DIR$/day9.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day11.py" beforeDir="false" afterPath="$PROJECT_DIR$/day11.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +19,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Python Unit Test" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;pbudka&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/pbudka/advent_of_code_24&quot;,
+    &quot;accountId&quot;: &quot;cbcc8785-f46f-4449-8e34-c739896e481b&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -36,7 +49,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests for day_length_test.DayLengthTest.testSolarTransit.executor": "Run",
+    "Python tests.Python tests in day_lenght_test.py.executor": "Run",
+    "Python tests.Python tests in day_length_test.py.executor": "Run",
     "Python.day1.executor": "Run",
+    "Python.day10.executor": "Run",
+    "Python.day11.executor": "Run",
     "Python.day2.executor": "Run",
     "Python.day4.executor": "Run",
     "Python.day5.executor": "Run",
@@ -44,6 +62,8 @@
     "Python.day7.executor": "Run",
     "Python.day8.executor": "Run",
     "Python.day9.executor": "Run",
+    "Python.day_lenght.executor": "Run",
+    "Python.day_length.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
@@ -53,6 +73,44 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RunManager" selected="Python tests.Python tests in day_length_test.py">
+    <configuration name="Python tests for day_length_test.DayLengthTest.testSolarTransit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="advent_of_code_24" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;day_length_test.DayLengthTest.testSolarTransit&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in day_length_test.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="advent_of_code_24" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/day_length_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests in day_length_test.py" />
+        <item itemvalue="Python tests.Python tests for day_length_test.DayLengthTest.testSolarTransit" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -142,7 +200,71 @@
       <option name="project" value="LOCAL" />
       <updated>1734292789890</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="day9 in construction">
+      <option name="closed" value="true" />
+      <created>1734642803335</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734642803335</updated>
+    </task>
+    <task id="LOCAL-00012" summary="day9 in construction">
+      <option name="closed" value="true" />
+      <created>1734644394640</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734644394640</updated>
+    </task>
+    <task id="LOCAL-00013" summary="day9 in construction">
+      <option name="closed" value="true" />
+      <created>1734645287352</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1734645287352</updated>
+    </task>
+    <task id="LOCAL-00014" summary="day9 in construction">
+      <option name="closed" value="true" />
+      <created>1734719175409</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1734719175409</updated>
+    </task>
+    <task id="LOCAL-00015" summary="day9 done">
+      <option name="closed" value="true" />
+      <created>1734728272455</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1734728272455</updated>
+    </task>
+    <task id="LOCAL-00016" summary="day10 done">
+      <option name="closed" value="true" />
+      <created>1734798562546</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1734798562546</updated>
+    </task>
+    <task id="LOCAL-00017" summary="day11 done">
+      <option name="closed" value="true" />
+      <created>1734809886927</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1734809886927</updated>
+    </task>
+    <task id="LOCAL-00018" summary="day11 done gzip">
+      <option name="closed" value="true" />
+      <created>1734814613594</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1734814613594</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +288,24 @@
     <MESSAGE value="day6 done" />
     <MESSAGE value="day7 done" />
     <MESSAGE value="day8 in construction" />
-    <option name="LAST_COMMIT_MESSAGE" value="day8 in construction" />
+    <MESSAGE value="day9 in construction" />
+    <MESSAGE value="day9 done" />
+    <MESSAGE value="day10 done" />
+    <MESSAGE value="day11 done" />
+    <MESSAGE value="day11 done gzip" />
+    <MESSAGE value="day length" />
+    <MESSAGE value="day length with DST" />
+    <option name="LAST_COMMIT_MESSAGE" value="day length with DST" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/day_length.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
