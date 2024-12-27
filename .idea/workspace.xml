@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a0f3a25-8ead-4a38-ab74-56e2faf13c3a" name="Changes" comment="day length with DST">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day12.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day12.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day12ex.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_length.py" beforeDir="false" afterPath="$PROJECT_DIR$/day_length.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_length_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/day_length_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Python Unit Test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -49,6 +49,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests for day_length_test.DayLengthTest.testDayFromEquinox.executor": "Run",
+    "Python tests.Python tests for day_length_test.DayLengthTest.testDayLength.executor": "Run",
+    "Python tests.Python tests for day_length_test.DayLengthTest.testDeclination.executor": "Run",
     "Python tests.Python tests for day_length_test.DayLengthTest.testSolarTransit.executor": "Run",
     "Python tests.Python tests for day_length_test.DayLengthTest.testSunRiseSunSet.executor": "Run",
     "Python tests.Python tests in day_lenght_test.py.executor": "Run",
@@ -56,6 +59,7 @@
     "Python.day1.executor": "Run",
     "Python.day10.executor": "Run",
     "Python.day11.executor": "Run",
+    "Python.day12.executor": "Run",
     "Python.day2.executor": "Run",
     "Python.day4.executor": "Run",
     "Python.day5.executor": "Run",
@@ -73,7 +77,29 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.Python tests for day_length_test.DayLengthTest.testDayFromEquinox">
+  <component name="RunManager" selected="Python.day12">
+    <configuration name="day12" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="advent_of_code_24" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day12.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for day_length_test.DayLengthTest.testDayFromEquinox" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="advent_of_code_24" />
       <option name="ENV_FILES" value="" />
@@ -119,7 +145,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for day_length_test.DayLengthTest.testSolarTransit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in day_length_test.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="advent_of_code_24" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,32 +156,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;day_length_test.DayLengthTest.testSolarTransit&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for day_length_test.DayLengthTest.testSunRiseSunSet" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="advent_of_code_24" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;day_length_test.DayLengthTest.testSunRiseSunSet&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/day_length_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.day12" />
+        <item itemvalue="Python tests.Python tests in day_length_test.py" />
         <item itemvalue="Python tests.Python tests for day_length_test.DayLengthTest.testDayFromEquinox" />
         <item itemvalue="Python tests.Python tests for day_length_test.DayLengthTest.testDayLength" />
         <item itemvalue="Python tests.Python tests for day_length_test.DayLengthTest.testDeclination" />
-        <item itemvalue="Python tests.Python tests for day_length_test.DayLengthTest.testSolarTransit" />
-        <item itemvalue="Python tests.Python tests for day_length_test.DayLengthTest.testSunRiseSunSet" />
       </list>
     </recent_temporary>
   </component>
@@ -320,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734968925678</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="day length with DST">
+      <option name="closed" value="true" />
+      <created>1735293699759</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1735293699759</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
