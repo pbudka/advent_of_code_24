@@ -54,7 +54,7 @@ def daysFromEquinox(d, m, y):
             return d - 21
         else:
             return (366 if isLeapYear(y + 1) else 365) - d
-    days = -10
+    days = -21
     for m in range(3, m if m > 3 else m + 12):
         mo = m % 12
         if not mo:
