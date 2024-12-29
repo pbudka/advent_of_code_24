@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a0f3a25-8ead-4a38-ab74-56e2faf13c3a" name="Changes" comment="day 13 done">
-      <change afterPath="$PROJECT_DIR$/day14.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day14ex.txt" afterDir="false" />
+    <list default="true" id="4a0f3a25-8ead-4a38-ab74-56e2faf13c3a" name="Changes" comment="day 14.1 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day14.py" beforeDir="false" afterPath="$PROJECT_DIR$/day14.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -377,7 +375,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735491783778</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="day 14.1 done">
+      <option name="closed" value="true" />
+      <created>1735496180005</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1735496180005</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -411,7 +417,8 @@
     <MESSAGE value="day 12" />
     <MESSAGE value="day 12 done" />
     <MESSAGE value="day 13 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 13 done" />
+    <MESSAGE value="day 14.1 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 14.1 done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
