@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a0f3a25-8ead-4a38-ab74-56e2faf13c3a" name="Changes" comment="day 14.1 done">
-      <change afterPath="$PROJECT_DIR$/day15.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day15ex.txt" afterDir="false" />
+    <list default="true" id="4a0f3a25-8ead-4a38-ab74-56e2faf13c3a" name="Changes" comment="day 16 attempted">
+      <change afterPath="$PROJECT_DIR$/day16.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day16.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day16ex.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day16ex2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,40 +48,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for day_length_test.DayLengthTest.testDayFromEquinox.executor": "Run",
-    "Python tests.Python tests for day_length_test.DayLengthTest.testDayLength.executor": "Run",
-    "Python tests.Python tests for day_length_test.DayLengthTest.testDeclination.executor": "Run",
-    "Python tests.Python tests for day_length_test.DayLengthTest.testSolarTransit.executor": "Run",
-    "Python tests.Python tests for day_length_test.DayLengthTest.testSunRiseSunSet.executor": "Run",
-    "Python tests.Python tests in day_lenght_test.py.executor": "Run",
-    "Python tests.Python tests in day_length_test.py.executor": "Run",
-    "Python.day1.executor": "Run",
-    "Python.day10.executor": "Run",
-    "Python.day11.executor": "Run",
-    "Python.day12.executor": "Run",
-    "Python.day13.executor": "Run",
-    "Python.day14.executor": "Run",
-    "Python.day15.executor": "Run",
-    "Python.day2.executor": "Run",
-    "Python.day4.executor": "Run",
-    "Python.day5.executor": "Run",
-    "Python.day6.executor": "Run",
-    "Python.day7.executor": "Run",
-    "Python.day8.executor": "Run",
-    "Python.day9.executor": "Run",
-    "Python.day_lenght.executor": "Run",
-    "Python.day_length.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for day_length_test.DayLengthTest.testDayFromEquinox.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for day_length_test.DayLengthTest.testDayLength.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for day_length_test.DayLengthTest.testDeclination.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for day_length_test.DayLengthTest.testSolarTransit.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for day_length_test.DayLengthTest.testSunRiseSunSet.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in day_lenght_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in day_length_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day10.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day11.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day12.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day13.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day14.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day15.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day16.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day5.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day6.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day7.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day8.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day9.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day_lenght.executor&quot;: &quot;Run&quot;,
+    &quot;Python.day_length.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.day15">
+}</component>
+  <component name="RunManager" selected="Python.day16">
     <configuration name="day12" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="advent_of_code_24" />
       <option name="ENV_FILES" value="" />
@@ -169,26 +172,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in day_length_test.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="day16" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="advent_of_code_24" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/day_length_test.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day16.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.day15" />
-        <item itemvalue="Python.day14" />
-        <item itemvalue="Python.day13" />
+        <item itemvalue="Python.day16" />
         <item itemvalue="Python.day12" />
       </list>
     </recent_temporary>
@@ -402,7 +410,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735498792563</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="day 15 done">
+      <option name="closed" value="true" />
+      <created>1736023029541</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1736023029541</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -437,32 +453,15 @@
     <MESSAGE value="day 12 done" />
     <MESSAGE value="day 13 done" />
     <MESSAGE value="day 14.1 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 14.1 done" />
+    <MESSAGE value="day 15 done" />
+    <MESSAGE value="day 16 attempted" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 16 attempted" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/day13.py</url>
-          <line>47</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/day13.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/day15.py</url>
-          <line>142</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/day15.py</url>
-          <line>56</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="coords[idx]" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
